@@ -1,24 +1,47 @@
+# Main Chat Bot
+
+import pyttsx3
+
+from datetime import datetime
+
+engine = pyttsx3.init()
+
 name = "Avinash"
 
 while True:
     user = input(f"{name}: ")
 
     if user.lower() in ["hi", "hello"]:
-        print("Mitra: Namaskar Avinash!")
+        reply = "Namaskar Avinash!"
 
     elif "osa" in user.lower():
-        print("Mitra: OSA mhanje Optical Spectrum Analyzer.")
+        reply = "OSA mhanje Optical Spectrum Analyzer."
 
     elif "bert" in user.lower():
-        print("Mitra: BERT mhanje Bit Error Rate Tester.")
+        reply = "BERT mhanje Bit Error Rate Tester."
+
+    elif "time" in user.lower():
+        reply = datetime.now().strftime("Ata vel %H:%M ahe")
+
+    elif "date" in user.lower():
+        reply = datetime.now().strftime("Aajchi tarikh %d-%m-%Y ahe")    
+
+    elif "edfa" in user.lower():
+        reply = "EDFA optical signal amplify karte."
+
+    elif "sfp" in user.lower():
+        reply = "SFP he optical transceiver module ahe."
 
     elif user.lower() == "bye":
-        print("Mitra: Bye Avinash!")
-
-
-    elif "telecom" in user.lower():
-        print("Mitra: Telecom madhe Fiber,DWDM, Routing ani Transmission yetat.")
+        reply = "Bye Avinash!"
+        print("Mitra:", reply)
+        engine.say(reply)
+        engine.runAndWait()
         break
 
     else:
-        print("Mitra: Mi ajun shiktoy, punha vichar.")
+        reply = "Mi ajun shiktoy, punha vichar."
+
+    print("Mitra:", reply)
+    engine.say(reply)
+    engine.runAndWait()
