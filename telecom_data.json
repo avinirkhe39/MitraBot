@@ -1,0 +1,20 @@
+{
+    "fiber optic": {
+        "definition": "Fiber optic hi data transmission sathi vaprli janari glass kiwa plastic cable aahe.",
+        "advantages": [
+            "High Speed",
+            "Long Distance",
+            "Low Signal Loss"
+        ]
+    },
+
+    "otdr": {
+        "definition": "OTDR mhanje Optical Time Domain Reflectometer.",
+        "use": "Fiber cable madhil fault ani distance shodhnyasathi vapartat."
+    },
+
+    "edfa": {
+        "definition": "EDFA mhanje Erbium Doped Fiber Amplifier.",
+        "use": "Optical signal amplify karnyasathi vapartat."
+    }
+}
